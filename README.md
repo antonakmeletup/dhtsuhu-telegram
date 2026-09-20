@@ -91,3 +91,7 @@ Kirimkan perintah ini ke Bot Telegram yang telah Anda buat:
 <br>Contoh: `/ukuran 2` |
 | `/suhu` | Bot akan membalas dengan status suhu dan kelembapan saat ini. |
 | `/status` | Mengecek seluruh status saat ini (teks aktif, warna, kecepatan, IP Address WiFi, sisa RAM, dll). |
+
+---------------------------------------------------------------------------------------------------------------------
+
+BY: Claude And Gemini
