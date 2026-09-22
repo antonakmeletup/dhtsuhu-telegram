@@ -55,11 +55,31 @@ const char* WIFI_PASS = "PASSWORD_WIFI_ANDA";
 
 3. **Wiring (Pengkabelan):**
 * **DHT11:** Pin Data ke `Pin 27` ESP32.
-* **Panel P10:** Ikuti pemetaan pin berikut (tertera di dalam kode):
-* `R1` (23), `G1` (21), `B1` (22)
-* `R2` (4), `G2` (19), `B2` (15)
-* `A` (5), `B` (33), `C` (18)
-* `LAT` (32), `OE` (25), `CLK` (26)
+
+
+| Label di PCB Panel | Sinyal Data | Pin ESP32 DevKit V1 | Keterangan Kode |
+| --- | --- | --- | --- |
+| **DR1** | Data Red Upper | **GPIO 23** | `#define R1_PIN 23` |
+| **DG1** | Data Green Upper | **GPIO 21** | `#define G1_PIN 21` |
+| **DB1** | Data Blue Upper | **GPIO 22** | `#define B1_PIN 22` |
+| **DR2** | Data Red Lower | **GPIO 4** | `#define R2_PIN 4` |
+| **DG2** | Data Green Lower | **GPIO 19** | `#define G2_PIN 19` |
+| **DB2** | Data Blue Lower | **GPIO 15** | `#define B2_PIN 15` |
+| **A** | Address A | **GPIO 5** | `#define A_PIN 5` |
+| **B** | Address B | **GPIO 33** | `#define B_PIN 33` |
+| **C** | Address C | **GPIO 18** | `#define C_PIN 18` |
+| **CLK** | Clock | **GPIO 26** | `#define CLK_PIN 26` |
+| **STB** | Strobe / Latch | **GPIO 32** | `#define LAT_PIN 32` |
+| **OE** | Output Enable | **GPIO 25** | `#define OE_PIN 25` |
+| **GND** | Ground | **GND ESP32** | Hubungkan ke GND ESP32 & Power Supply |
+
+---
+
+### Catatan Tambahan:
+
+* **STB (Strobe)** pada panel Anda berfungsi sama dengan **LAT (Latch)** dalam konfigurasi kode.
+* **DR, DG, DB** adalah penamaan lain dari **R, G, B** (Data Red, Data Green, Data Blue).
+* Seluruh pin bertanda **GND** di sisi kanan PCB panel dapat dihubungkan bersama ke **GND ESP32** dan **GND Power Supply 5V**.
 
 
 
